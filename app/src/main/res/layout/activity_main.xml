@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Hecho por John David Molina -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/contentMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <!--Organizo la pantalla en 5 lineas:
+        Linea de display
+        Linea 7 8 9 C
+        Linea 4 5 6 / *
+        Linea 1 2 3 - +
+        Linea . 0 =
+    -->
+    <!-- Linea de display -->
+    <TextView
+        android:id="@+id/Display"
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:background="@color/gris_claro"
+        android:gravity="end|center_vertical"
+        android:hint="Ingrese su cálculo"
+        android:inputType="none"
+        android:maxLength="16"
+        android:textIsSelectable="true"
+        android:textSize="40sp"
+        android:padding="16dp"/>
+
+    <LinearLayout
+        android:id="@+id/teclado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Teclas 7 8 9 C -->
+        <LinearLayout
+            android:id="@+id/teclasFila1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/tecla7"
+                style="@style/botonDigito"
+                android:text="7" />
+            <Button
+                android:id="@+id/tecla8"
+                style="@style/botonDigito"
+                android:text="8" />
+            <Button
+                android:id="@+id/tecla9"
+                style="@style/botonDigito"
+                android:text="9" />
+
+            <Button
+                android:id="@+id/teclaC"
+                style="@style/botonC"
+                android:text="C" />
+        </LinearLayout>
+
+        <!-- Teclas 4 5 6 * / -->
+        <LinearLayout
+            android:id="@+id/teclasFila2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/tecla4"
+                style="@style/botonDigito"
+                android:text="4" />
+            <Button
+                android:id="@+id/tecla5"
+                style="@style/botonDigito"
+                android:text="5" />
+            <Button
+                android:id="@+id/tecla6"
+                style="@style/botonDigito"
+                android:text="6" />
+            <Button
+                android:id="@+id/teclaMultiplica"
+                style="@style/botonOperacion"
+                android:textAllCaps="false"
+                android:text="x" />
+            <Button
+                android:id="@+id/teclaDivide"
+                style="@style/botonOperacion"
+                android:text="÷" />
+        </LinearLayout>
+
+        <!-- Teclas 1 2 3 + - -->
+        <LinearLayout
+            android:id="@+id/teclasFila3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/tecla1"
+                style="@style/botonDigito"
+                android:text="1" />
+            <Button
+                android:id="@+id/tecla2"
+                style="@style/botonDigito"
+                android:text="2" />
+            <Button
+                android:id="@+id/tecla3"
+                style="@style/botonDigito"
+                android:text="3" />
+            <Button
+                android:id="@+id/teclaSuma"
+                style="@style/botonOperacion"
+                android:text="+" />
+            <Button
+                android:id="@+id/teclaResta"
+                style="@style/botonOperacion"
+                android:text="-" />
+        </LinearLayout>
+
+        <!-- Teclas . 0 = -->
+        <LinearLayout
+            android:id="@+id/teclasFila4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/teclaPunto"
+                style="@style/botonPunto"
+                android:text="." />
+            <Button
+                android:id="@+id/tecla0"
+                style="@style/botonDigito"
+                android:text="0" />
+
+            <Button
+                android:id="@+id/teclaIgual"
+                style="@style/botonIgual"
+                android:text="=" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
