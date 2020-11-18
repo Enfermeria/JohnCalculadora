@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">John Calculadora</string>
+    <string name="cientifica">Científica</string>
+
+    <string-array name="tipoAngulo">
+        <item>Grados</item>
+        <item>Radianes</item>
+        <item>Gradianes</item>
+    </string-array>
 </resources>

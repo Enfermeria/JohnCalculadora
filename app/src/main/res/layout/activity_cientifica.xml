@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Hecho por John David Molina -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Cientifica"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <!--Organizo la pantalla en 5 lineas:
+        Linea de display
+        Linea 7 8 9 C
+        Linea 4 5 6 / *
+        Linea 1 2 3 - +
+        Linea . 0 =
+    -->
+    <!-- Linea de display -->
+    <TextView
+        android:id="@+id/display"
+        style="@style/display" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Switch: Permite seleccionar calculadora común/científica -->
+        <LinearLayout
+            style="@style/linearLayout_switch" >
+
+            <TextView
+                style="@style/texto_switch"
+                android:text="Normal  " />
+
+            <Switch
+                android:id="@+id/switchCientifica"
+                style="@style/switch_cientifica"
+                android:checked="true"
+                android:onClick="cambioANormal" />
+
+            <TextView
+                style="@style/texto_switch"
+                android:text="Científica" />
+        </LinearLayout>
+
+        <Spinner
+            android:id="@+id/spinnerTipoAngulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/tipoAngulo"
+            android:gravity="right" />
+
+    </LinearLayout>
+
+
+    <!-- incluye teclado del archivo teclado_cientifico.xml -->
+    <include layout="@layout/teclado_cientifico" />
+
+
+    <!-- incluye teclado del archivo teclado_normal.xml -->
+    <include layout="@layout/teclado_normal" />
+
+
+
+</LinearLayout>

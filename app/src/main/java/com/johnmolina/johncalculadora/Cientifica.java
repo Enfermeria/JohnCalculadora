@@ -7,24 +7,21 @@ package com.johnmolina.johncalculadora;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Display;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.TextView;
-import android.widget.Toast;
-import com.johnmolina.johncalculadora.Utils;
 
-public class MainActivity extends AppCompatActivity {
+public class Cientifica extends AppCompatActivity {
     Utils utils;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_cientifica);
 
         utils = new Utils(getApplicationContext());
         //Vinculo display
@@ -52,7 +49,10 @@ public class MainActivity extends AppCompatActivity {
 
         //vinculo switch de normal/cientifica
         utils.switchCientifica = (Switch) findViewById(R.id.switchCientifica);
-    } //onCreate
+
+        //vinculo spinner de tipo de angulo
+        utils.tipoAngulo = (Spinner) findViewById(R.id.spinnerTipoAngulo);
+    }
 
 
     /****************************************************************************************
@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void onClickTeclaPunto(View view) {
-       utils.onClickTeclaPunto(view);
+        utils.onClickTeclaPunto(view);
     } // onClickTeclaPunto
 
 
@@ -81,9 +81,8 @@ public class MainActivity extends AppCompatActivity {
         utils.onClickTeclaOperacionUnaria(view);
     } // onClickTeclaOperacionUnaria
 
-    public void cambioACientifica(View v) {
-        Intent intentCientifica = new Intent(this, Cientifica.class); //creo un intent para que se llame a la otra activity
-        startActivity(intentCientifica); //llama a la otra activity
+    public void cambioANormal(View v) {
+        Intent intentNormal = new Intent(this, MainActivity.class); //creo un intent para que se llame a la otra activity
+        startActivity(intentNormal); //llama a la otra activity
     }
-} //class MainActivity
-
+}

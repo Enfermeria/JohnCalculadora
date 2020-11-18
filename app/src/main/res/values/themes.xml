@@ -14,6 +14,9 @@
         <!-- Customize your theme here. -->
     </style>
 
+
+
+
     <!-- Estilos para los botones -->
     <style name="boton">
         <item name="android:layout_width">65dp</item>
@@ -37,7 +40,7 @@
         <item name="backgroundTint">@color/gris</item>
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_weight">50</item>
-        <item name="android:onClick">onClickTeclaOperacion</item>
+        <item name="android:onClick">onClickTeclaOperacionBinaria</item>
     </style>
 
     <style name="botonPunto" parent="boton">
@@ -47,7 +50,69 @@
 
     <style name="botonIgual" parent="boton">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:onClick">onClickTeclaOperacion</item>
+        <item name="android:onClick">onClickTeclaOperacionBinaria</item>
+    </style>
+
+    <!-- Estilos para los botones funciones cientificas-->
+    <style name="botonCientifico">
+        <item name="android:layout_width">65dp</item>
+        <item name="android:layout_height">55dp</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textStyle">italic</item>
+        <item name="backgroundTint">@color/purple_200</item>
+        <item name="android:onClick">onClickTeclaOperacionUnaria</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+
+
+
+    <!-- Estilos para el switch normal/cientifica -->
+    <style name="switch_cientifica">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textOff">♦</item>
+        <item name="android:textOn">♦</item>
+    </style>
+
+    <!-- Estilos para el texto que rodea al switch normal/cientifica -->
+    <style name="texto_switch">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Estilos para el layout que contiene el switch normal/cientifica -->
+    <style name="linearLayout_switch">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">10dp</item>
+        <item name="android:layout_marginEnd">10dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:background">@color/teal_200</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+
+
+    <!-- Estilos para el display -->
+    <style name="display">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">90dp</item>
+        <item name="android:background">@color/gris_claro</item>
+        <item name="android:gravity">end|center_vertical</item>
+        <item name="android:hint">Ingrese su cálculo</item>
+        <item name="android:inputType">none</item>
+        <!-- <item name="android:maxLength">16</item> -->
+        <item name="android:textIsSelectable">true</item>
+        <item name="android:textSize">32sp</item>
+        <item name="android:padding">16dp</item>
     </style>
 
 </resources>
